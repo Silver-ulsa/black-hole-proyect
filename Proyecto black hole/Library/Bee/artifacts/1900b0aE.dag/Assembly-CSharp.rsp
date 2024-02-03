@@ -355,6 +355,10 @@
 "Assets/Scripts/Character Scripts/PlayerWeaponsScript.cs"
 "Assets/Scripts/Character Scripts/sway.cs"
 "Assets/Scripts/Character Scripts/WeaponController.cs"
+"Assets/Scripts/Enviroment Scripts/Generation scripts/AddRoomToListScript.cs"
+"Assets/Scripts/Enviroment Scripts/Generation scripts/DestructionScript.cs"
+"Assets/Scripts/Enviroment Scripts/Generation scripts/RoomSpawner.cs"
+"Assets/Scripts/Enviroment Scripts/Generation scripts/RoomTemplatesScript.cs"
 -langversion:9.0
 
 /deterministic
