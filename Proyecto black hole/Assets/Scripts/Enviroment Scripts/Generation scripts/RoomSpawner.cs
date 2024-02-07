@@ -4,64 +4,14 @@ using UnityEngine;
 
 public class RoomSpawner : MonoBehaviour
 {
+
+//todo detectar cuando el spawnpoint esta dentro de un compare tag y detectar cuando esta dentro de otro spawnpoint
+//todo cuando esta dentro de otro spawnpoint es verdadero
+//todo cuando no esta dentro de otro spawnpoint es falso
+    public bool spawned = false;
     public int openSide;
-    //1 = bottom door
-    //2 = top door
-    //3 = left door
-    //4 = right door
-
-    private int rand;
-    private RoomTemplatesScript templates;
-    private bool spawned = false;
-    void Start()
+        private void OnTriggerStay(Collider other)
     {
-        templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplatesScript>();
-        Invoke("Spawn", 0.1f);
+        
     }
-
-    void Spawn(){
-
-        if (spawned == false)
-        {
-            if (openSide == 1)
-            {
-                //Need to spawn a room with a BOTTOM door.
-                rand = Random.Range(0, templates.bottomRooms.Length);
-                Instantiate(templates.bottomRooms[rand], transform.position, templates.bottomRooms[rand].transform.rotation);
-            }
-            else if (openSide == 2)
-            {
-                //Need to spawn a room with a TOP door.
-                rand = Random.Range(0, templates.topRooms.Length);
-                Instantiate(templates.topRooms[rand], transform.position, templates.topRooms[rand].transform.rotation);
-            }
-            else if (openSide == 3)
-            {
-                //Need to spawn a room with a LEFT door.
-                rand = Random.Range(0, templates.leftRooms.Length);
-                Instantiate(templates.leftRooms[rand], transform.position, templates.leftRooms[rand].transform.rotation);
-            }
-            else if (openSide == 4)
-            {
-                //Need to spawn a room with a RIGHT door.
-                rand = Random.Range(0, templates.rightRooms.Length);
-                Instantiate(templates.rightRooms[rand], transform.position, templates.rightRooms[rand].transform.rotation);
-            }
-
-            spawned = true;
-        }
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("SpawnPoint"))
-        {
-                if (other.GetComponent<RoomSpawner>().spawned == false && spawned == false)
-                {
-                    Instantiate(templates.closedRoom, transform.position, Quaternion.identity);
-                    Destroy(gameObject);
-                }
-                spawned = true;;
-        }
-    }
-
 }
