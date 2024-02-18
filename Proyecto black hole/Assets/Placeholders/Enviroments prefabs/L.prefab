@@ -1078,7 +1078,6 @@ GameObject:
   - component: {fileID: 2324408901847499036}
   - component: {fileID: 1374524539543800508}
   - component: {fileID: 7913521838934961704}
-  - component: {fileID: 6759871580480608076}
   m_Layer: 0
   m_Name: ComparePoint
   m_TagString: CompareTag
@@ -1130,18 +1129,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6759871580480608076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2981443971157354567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e30c897a54bc07459afcc917e103cc2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2999118236075339058
 GameObject:
   m_ObjectHideFlags: 0
@@ -1832,7 +1819,7 @@ GameObject:
   - component: {fileID: 60969370214440698}
   - component: {fileID: 5353515626984252880}
   - component: {fileID: 8764061150482614958}
-  - component: {fileID: 2782184393770804305}
+  - component: {fileID: 3715251773956993882}
   m_Layer: 0
   m_Name: SpawnPoint
   m_TagString: SpawnPoint
@@ -1884,7 +1871,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2782184393770804305
+--- !u!114 &3715251773956993882
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1893,7 +1880,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5383676957436789860}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1db9e06960bb21a4994691fbf68b4483, type: 3}
+  m_Script: {fileID: 11500000, guid: d1fadcfb70b718743b13f84d38640ccd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   openSide: 3

@@ -146,9 +146,4 @@ public class NewRoomSpawner : MonoBehaviour
             }
         }
     }
-
-    void CorrectiveRooms(){
-        Debug.Log("Spawning corrective rooms");
-    }
-
 }
