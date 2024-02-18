@@ -120,7 +120,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 18
+  controlID: 26
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,8 +140,8 @@ MonoBehaviour:
     y: 0
     width: 266.4
     height: 730.8
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 12}
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 19
+  controlID: 27
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -191,8 +191,8 @@ MonoBehaviour:
     y: 0
     width: 936.7999
     height: 489.6
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -290,7 +290,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 279.2
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
@@ -328,20 +328,20 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 7e32ffffea38ffff5250ffffec51ffff8653ffff2055ffff06fbffff
+      m_SelectedIDs: 8469ffff
+      m_LastClickedID: -38524
+      m_ExpandedIDs: f235ffff8469ffff6074ffffae75ffff9683ffff08fbffffd67600000677000018770000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Room Template(Clone)
-        m_OriginalName: Room Template(Clone)
+        m_Name: Weapon Camera
+        m_OriginalName: Weapon Camera
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -376000
+        m_UserData: 30434
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0
@@ -756,9 +756,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 6.377483, y: -9.757576, z: 4.819703}
+    m_Target: {x: 2.240877, y: 1.6191099, z: 0.026501417}
     speed: 2
-    m_Value: {x: 6.377483, y: -9.757576, z: 4.819703}
+    m_Value: {x: 2.240877, y: 1.6191099, z: 0.026501417}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -797,7 +797,7 @@ MonoBehaviour:
       m_Fade:
         m_Target: 0
         speed: 2
-        m_Value: 0
+        m_Value: 0.9999861
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 1, y: 1}
@@ -805,13 +805,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.509
   m_Rotation:
-    m_Target: {x: 0.053302325, y: 0.29392084, z: -0.016406273, w: 0.9542158}
+    m_Target: {x: 0.29991746, y: -0.18616426, z: 0.0597978, w: 0.9337119}
     speed: 2
-    m_Value: {x: 0.053301595, y: 0.29391682, z: -0.016406048, w: 0.9542028}
+    m_Value: {x: 0.2999175, y: -0.18616426, z: 0.0597978, w: 0.933712}
   m_Size:
-    m_Target: 21.406252
+    m_Target: 14.14453
     speed: 2
-    m_Value: 21.406252
+    m_Value: 13.535436
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -829,7 +829,7 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: 0.38633147, y: -0.097124554, z: 0.04094892, w: 0.9163183}
+  m_LastSceneViewRotation: {x: 0.29991746, y: -0.18616426, z: 0.0597978, w: 0.9337119}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -868,7 +868,7 @@ MonoBehaviour:
   m_SerializedViewNames: []
   m_SerializedViewValues: []
   m_PlayModeViewName: GameView
-  m_ShowGizmos: 1
+  m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
   m_TargetSize: {x: 1920, y: 1080}
@@ -878,7 +878,7 @@ MonoBehaviour:
   m_EnterPlayModeBehavior: 0
   m_UseMipMap: 0
   m_VSyncEnabled: 0
-  m_Gizmos: 1
+  m_Gizmos: 0
   m_Stats: 0
   m_SelectedSizes: 03000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_ZoomArea:
@@ -969,23 +969,23 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Placeholders/Enviroments prefabs
+    - Assets/Scripts/Character Scripts/Weapons Scripts
     m_Globs: []
     m_OriginalText: 
     m_FilterByTypeIntersection: 0
   m_ViewMode: 1
-  m_StartGridSize: 53
+  m_StartGridSize: 71
   m_LastFolders:
-  - Assets/Placeholders/Enviroments prefabs
-  m_LastFoldersGridSize: 53
+  - Assets/Scripts/Character Scripts/Weapons Scripts
+  m_LastFoldersGridSize: 71
   m_LastProjectPath: D:\Escritorio\black-hole proyect\Proyecto black hole
   m_LockTracker:
     m_IsLocked: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 55.80002}
-    m_SelectedIDs: 2c700000
-    m_LastClickedID: 28716
-    m_ExpandedIDs: 00000000fe6f00000070000002700000047000000c70000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: 848f0000
+    m_LastClickedID: 36740
+    m_ExpandedIDs: 00000000626e0000646e0000666e0000686e0000706e0000986e00001a75000048770000da7d000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1013,7 +1013,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000fe6f0000007000000270000004700000
+    m_ExpandedIDs: 00000000626e0000646e0000666e0000686e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1065,8 +1065,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 11.800018}
-    m_GridSize: 53
+    m_ScrollPosition: {x: 0, y: 0}
+    m_GridSize: 71
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 202
 --- !u!114 &16
@@ -1100,7 +1100,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 22810
+  m_LastSelectedObjectID: 30440
 --- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52

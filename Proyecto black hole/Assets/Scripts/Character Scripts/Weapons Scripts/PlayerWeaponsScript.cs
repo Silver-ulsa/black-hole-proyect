@@ -13,32 +13,44 @@ public class PlayerWeaponsScript : MonoBehaviour
 
     private WeaponController[] weaponSlots = new WeaponController[5];
 
-    // Start is called before the first frame update
     void Start()
     {
-        activeWeaponIndex = -1;
-
+        activeWeaponIndex = 1;
         foreach (WeaponController startingWeapon in startingWeapons)
         {
             AddWeapon(startingWeapon);
         }
+        SwitchWeapon(0);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        // Verifica las teclas numéricas del 1 al 5
+        for (int i = 0; i < 5; i++)
         {
-            SwitchWeapon(0);
+            // Comprueba si se ha presionado la tecla numérica correspondiente
+            if (Input.GetKeyDown(KeyCode.Alpha1 + i))
+            {
+                SwitchWeapon(i);
+                break; // Si se ha encontrado y procesado la tecla, no es necesario seguir iterando
+            }
         }
     }
 
     private void SwitchWeapon(int p_weaponIndex)
     {
-        if (p_weaponIndex != activeWeaponIndex && p_weaponIndex >= 0)
+        if (p_weaponIndex != activeWeaponIndex && p_weaponIndex >= 0 && p_weaponIndex < weaponSlots.Length)
         {
+            // Desactivar el arma activa actual
+            if (activeWeaponIndex >= 0 && activeWeaponIndex < weaponSlots.Length)
+            {
+                weaponSlots[activeWeaponIndex].gameObject.SetActive(false);
+            }
+
+            // Activar el arma seleccionada
             weaponSlots[p_weaponIndex].gameObject.SetActive(true);
             activeWeaponIndex = p_weaponIndex;
+            EventManager.current.NewGunEvent.Invoke();
         }
     }
 

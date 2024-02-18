@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum Shoot{Semi, Auto}
 public class WeaponController : MonoBehaviour
 {
     public Transform bulletSpawnPoint;
@@ -11,7 +12,7 @@ public class WeaponController : MonoBehaviour
     public float fireRate;
     public float maxAmmo = 8;
     public float currentAmmo;
-
+    public Shoot shootType;
     public float reloadTime = 1.5f;
     public float bulletForce = 10f;
     private float lastTimeShoot = Mathf.NegativeInfinity;
@@ -19,19 +20,28 @@ public class WeaponController : MonoBehaviour
     private void Awake()
     {
         currentAmmo = maxAmmo;
+        EventManager.current.updateBulletsEvent.Invoke((int)currentAmmo, (int)maxAmmo);
     }
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+    EventManager.current.updateBulletsEvent.Invoke((int)currentAmmo, (int)maxAmmo);
+
+        if (Input.GetButton("Fire1"))
         {
-            CanFire();
-        } 
-        else if (Input.GetButton("Fire1") && currentAmmo <= 1)
-        {
-            StartCoroutine(Reload());
+            if (shootType == Shoot.Auto)
+            {
+                CanFire();
+            }
+            else if (shootType == Shoot.Semi)
+            {
+                if (Input.GetButtonDown("Fire1"))
+                {
+                    CanFire();
+                }
+            }
         }
-        
+
         if (Input.GetKeyDown(KeyCode.R))
         {
             StartCoroutine(Reload());
@@ -52,7 +62,8 @@ public class WeaponController : MonoBehaviour
             if (currentAmmo >= 1)
             {
                 Fire();
-                currentAmmo--;
+                currentAmmo-=1;
+                EventManager.current.updateBulletsEvent.Invoke((int)currentAmmo, (int)maxAmmo);
                 return true;
             }
         }
@@ -64,6 +75,7 @@ public class WeaponController : MonoBehaviour
         Debug.Log("Reloading...");
         yield return new WaitForSeconds(reloadTime);
         currentAmmo = maxAmmo;
+        EventManager.current.updateBulletsEvent.Invoke((int)currentAmmo, (int)maxAmmo);
         Debug.Log("Reloaded");
     }
 }
