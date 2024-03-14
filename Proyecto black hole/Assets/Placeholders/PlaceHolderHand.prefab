@@ -136,7 +136,7 @@ MonoBehaviour:
   currentAmmo: 0
   shootType: 0
   reloadTime: 1.5
-  bulletForce: 100
+  bulletForce: 250
 --- !u!114 &3715125049391850127
 MonoBehaviour:
   m_ObjectHideFlags: 0

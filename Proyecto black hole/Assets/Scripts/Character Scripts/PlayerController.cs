@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     [Header("Speed Settings")]
 
     public float walkSpeed = 5f;
-    public float runSpeed = 10f;
+    public float runSpeed = 2f;
     [Header("Jump Settings")]
     public float jumpHeight = 1.9f;
     public float gravityScale = -20f;
@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
 
             if (Input.GetKey(KeyCode.LeftShift))
             {
-                moveInput = transform.TransformDirection(moveInput) * runSpeed;
+                moveInput = transform.TransformDirection(moveInput) * (walkSpeed * runSpeed);
             }
             else
             {
